@@ -12,7 +12,7 @@ function App() {
     category: 'Javascript',
     date: '2019-06-01',
   });
-  const [bodyContent, setBodyContent] = useState('안녕');
+  const [bodyContent, setBodyContent] = useState('안녕안녕');
   useEffect(() => {
     setHeader({
       url:
@@ -21,7 +21,7 @@ function App() {
       category: 'Javascript',
       date: '2019-06-01',
     });
-    setBodyContent('안녕');
+    setBodyContent('안녕안녕');
   }, []);
   return (
     <>
