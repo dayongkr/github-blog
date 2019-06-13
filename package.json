@@ -11,11 +11,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "prebuild": "rimraf ./blog/*",
     "build": "react-scripts build",
-    "postbuild": "ncp ./build ./blog",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -40,7 +40,9 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "ncp": "^2.0.0",
     "rimraf": "^2.6.3"
-  }
+  },
+  "homepage": "http://dayongbz.github.io/github-blog"
 }
