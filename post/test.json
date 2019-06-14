@@ -3,5 +3,5 @@
   "title": "자바스크립트 공부, Num.isNaN",
   "category": "Javascript",
   "date": "2019-06-01",
-  "body": "<h2>Javascript란</h2><p>선거에 관한 경비는 법률이 정하는 경우를 제외하고는 <b>정당 또는 후보자</b>에게 부담시킬 수 없다.<br/> 국회의원의 수는 법률로 정하되, 200인 이상으로 한다.<br/> 국회는 국가의 예산안을 심의·확정한다.</p><p>국민경제의 발전을 위한 중요정책의 수립에 관하여 대통령의 자문에 응하기 위하여 국민경제자문회의를 둘 수 있다.<br/> 국회의원이 회기전에 체포 또는 구금된 때에는 현행범인이 아닌 한 국회의 요구가 있으면 회기중 석방된다.</p><blockquote>안녕하세요<b> 이다용 </b>입니다. <a href=\"https://google.com\">구글사이트 입니다.</a></blockquote><pre><code class='hljs javscript'>function hello() {\n\tconst dayong = \"안녕하세요\"\n}</code><pre>"
+  "body": "<h2>Javascript란</h2><p>선거에 관한 경비는 법률이 정하는 경우를 제외하고는 <b>정당 또는 후보자</b>에게 부담시킬 수 없다.<br/> 국회의원의 수는 법률로 정하되, 200인 이상으로 한다.<br/> 국회는 국가의 예산안을 심의·확정한다.</p><p>국민경제의 발전을 위한 중요정책의 수립에 관하여 대통령의 자문에 응하기 위하여 국민경제자문회의를 둘 수 있다.<br/> 국회의원이 회기전에 체포 또는 구금된 때에는 현행범인이 아닌 한 국회의 요구가 있으면 회기중 석방된다.</p><blockquote>안녕하세요<b> 이다용 </b>입니다. <a href=\"https://google.com\" target='_blank'>구글사이트 입니다.</a></blockquote><pre><code class='hljs javscript'>function hello() {\n\tconst dayong = \"안녕하세요\"\n}</code><pre>"
 }
