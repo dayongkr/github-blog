@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import './statusBar.css';
 
 function useStatus(element) {
   const bar = useRef();

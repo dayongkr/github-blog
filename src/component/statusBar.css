@@ -1,0 +1,14 @@
+#statusBarContainer {
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+}
+
+#statusBar {
+  border-radius: 0 5px 5px 0;
+  background-color: #e74c3c;
+  transform: translateX(-100%);
+  height: 5px;
+  width: 100%;
+}

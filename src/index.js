@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import hljs from 'highlight.js';
-import useStatus from './component/useStatus';
+import gnb from './component/gnb';
 import './atom-one-dark.css';
 import './index.css';
 
 function App() {
-  const target = useRef();
+  const targetRef = useRef();
+  const headerRef = useRef();
   const [postFileUrl, setPostFileUrl] = useState('post/test.json');
   const [header, setHeader] = useState({
     url:
@@ -27,12 +28,16 @@ function App() {
     getContent(postFileUrl);
     hljs.initHighlightingOnLoad();
   }, [postFileUrl]);
+  useEffect(() => {
+    hljs.initHighlightingOnLoad();
+  });
   return (
     <>
-      {useStatus(target)}
+      {gnb(targetRef, headerRef, header.title)}
       <div
         id="postHeaderWrapper"
         style={{ backgroundImage: `url(${header.url})` }}
+        ref={headerRef}
       >
         <h1 id="postHeaderTitle">{header.title}</h1>
         <hr id="postHeaderHr" />
@@ -43,7 +48,7 @@ function App() {
       </div>
       <div
         id="postBodyWrapper"
-        ref={target}
+        ref={targetRef}
         dangerouslySetInnerHTML={{ __html: header.body }}
       />
     </>
