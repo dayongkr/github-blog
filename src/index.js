@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
+import hljs from 'highlight.js';
 import useStatus from './component/useStatus';
+import './atom-one-dark.css';
 import './index.css';
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
   useEffect(() => {
     setPostFileUrl('post/test.json');
     getContent(postFileUrl);
+    hljs.initHighlightingOnLoad();
   }, [postFileUrl]);
   return (
     <>
