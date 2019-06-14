@@ -5,24 +5,25 @@ import './index.css';
 
 function App() {
   const target = useRef();
+  const [postFileUrl, setPostFileUrl] = useState('post/test.json');
   const [header, setHeader] = useState({
     url:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png',
     title: '자바스크립트 공부, Num.isNaN',
     category: 'Javascript',
     date: '2019-06-01',
+    body: '안녕',
   });
-  const [bodyContent, setBodyContent] = useState('안녕안녕');
+  const getContent = async url => {
+    const response = await fetch(url);
+    const data = await response.json();
+    document.querySelector('title').innerText = `블로그 ${data.title}`;
+    return setHeader(data);
+  };
   useEffect(() => {
-    setHeader({
-      url:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png',
-      title: '자바스크립트 공부, Num.isNaN',
-      category: 'Javascript',
-      date: '2019-06-01',
-    });
-    setBodyContent('안녕안녕');
-  }, []);
+    setPostFileUrl('post/test.json');
+    getContent(postFileUrl);
+  }, [postFileUrl]);
   return (
     <>
       {useStatus(target)}
@@ -37,9 +38,11 @@ function App() {
           <span id="postHeaderDay">{header.date}</span>
         </div>
       </div>
-      <div id="postBodyWrapper" ref={target}>
-        {bodyContent}
-      </div>
+      <div
+        id="postBodyWrapper"
+        ref={target}
+        dangerouslySetInnerHTML={{ __html: header.body }}
+      />
     </>
   );
 }
