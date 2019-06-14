@@ -26,7 +26,6 @@ function App() {
   useEffect(() => {
     setPostFileUrl('post/test.json');
     getContent(postFileUrl);
-    hljs.initHighlightingOnLoad();
   }, [postFileUrl]);
   useEffect(() => {
     hljs.initHighlightingOnLoad();
