@@ -45,6 +45,8 @@ body {
   font-weight: bold;
   text-align: center;
   margin: 20px 0;
+  background-color: #e74c3c;
+  padding: 3px 3px 10px;
 }
 
 #postHeaderHr {
@@ -91,8 +93,56 @@ body {
 }
 
 #postBodyWrapper {
-  width: 1200px;
+  min-width: 800px;
+  max-width: 1200px;
   height: 5000px;
-  padding: 100px 0 0;
+  padding: 100px 50px;
   margin: 0 auto;
+  color: #2c3e50;
+}
+
+#postBodyWrapper ::selection {
+  background-color: #f39c12;
+  color: white;
+}
+
+#postBodyWrapper a {
+  color: #e74c3c;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#postBodyWrapper b {
+  font-style: italic;
+  font-weight: bold;
+}
+
+#postBodyWrapper h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 50px;
+  border-bottom: 3px solid #eee;
+  color: #e74c3c;
+  padding: 0 0 20px;
+}
+
+#postBodyWrapper h2::before {
+  content: '#';
+}
+
+#postBodyWrapper blockquote {
+  width: 600px;
+  min-height: 100px;
+  margin: 50px auto;
+  padding: 10px;
+  text-align: left;
+  background-color: #f1f3f5;
+  border-left: 5px solid #e74c3c;
+  color: #495057;
+}
+
+#postBodyWrapper p {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  text-align: left;
 }
