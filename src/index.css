@@ -29,7 +29,7 @@ body {
   height: 100vh;
   min-height: 300px;
   background-repeat: no-repeat;
-  background-position: left, center;
+  background-position: center, 0;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
